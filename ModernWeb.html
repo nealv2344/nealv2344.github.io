@@ -6,85 +6,85 @@
     <title>Modern Web Browsers</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
-<body>
-    <!-- same as index -->
-    <header class="site-header">
-      <h1>Modern Web Browsers</h1>
+  <body>
+      <!-- same as index -->
+      <header class="site-header">
+        <h1>Modern Web Browsers</h1>
 
-      <div class="hamburger-wrapper">
-        <button class="hamburger-btn" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <div class="hamburger-wrapper">
+          <button class="hamburger-btn" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
 
-        <nav class="hamburger-menu">
+          <nav class="hamburger-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="earlyWeb.html">Early Web Browsers</a></li>
+                <li><a href="modernWeb.html">Modern Web Browsers</a></li>
+                <li><a href="references.html">References</a></li>
+              </ul>
+          </nav>
+        </div>
+      </header>
+      
+        <!-- modern web browser content, retrieved from essay(Assignment 1) -->
+        <main class="content">
+
+          <h2>Current Market Landscape</h2>
+          <p>
+            Google Chrome remains the market leader with over 60% share, thanks to its V8 engine,
+            frequent updates, and deep integration with Google services. Safari commands the Apple
+            ecosystem with strong performance on iOS and macOS. Microsoft Edge (Chromium-based),
+            Firefox, and Opera round out the top five, each offering unique features like privacy
+            modes, built-in VPNs, or battery-saving profiles.
+          </p>
+      
+          <h2>Key Technologies</h2>
           <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="earlyWeb.html">Early Web Browsers</a></li>
-              <li><a href="modernWeb.html">Modern Web Browsers</a></li>
-              <li><a href="references.html">References</a></li>
-            </ul>
-        </nav>
-      </div>
-    </header>
-    
-      <!-- modern web browser content, retrieved from essay(Assignment 1) -->
-      <main class="content">
+            <li><strong>Rendering Engines:</strong> Blink (Chrome, Edge, Opera), WebKit (Safari), and Gecko (Firefox) power layout and paint.</li>
+            <li><strong>JavaScript Engines:</strong> V8 (Chrome/Edge), SpiderMonkey (Firefox), and JavaScriptCore (Safari) execute code at near-native speeds.</li>
+            <li><strong>WebAssembly:</strong> Enables near-C++ performance for apps, games, and frameworks directly in the browser.</li>
+            <li><strong>DevTools:</strong> Integrated debugging, network profiling, performance audits, and accessibility inspectors.</li>
+          </ul>
+      
+          <h2>Security &amp; Privacy Enhancements</h2>
+          <p>
+            Modern browsers enforce strict sandboxing per tab or process, employ site isolation,
+            and offer built-in phishing/malware protection. Tracking prevention and fingerprinting
+            resistance are now standard in Edge’s Tracking Prevention, Firefox’s Enhanced Tracking
+            Protection, and Safari’s Intelligent Tracking Prevention.
+          </p>
+      
+          <h2>Performance &amp; Optimization</h2>
+          <p>
+            Browsers constantly optimize for speed via techniques like lazy-loading images,
+            resource prefetching, and code-splitting. HTTP/3, QUIC, and TLS 1.3 adoption reduce
+            latency, while GPU-accelerated compositing and multi-threaded layout improve UI smoothness.
+          </p>
+      
+          <h2>Mobile &amp; Cross-Device</h2>
+          <p>
+            Chrome for Android and Safari on iOS power billions of mobile sessions. Progressive
+            Web Apps blur the line between web pages and native apps, offering offline access,
+            push notifications, and home-screen installation across platforms.
+          </p>
+      
+          <h2>Emerging Trends</h2>
+          <ul>
+            <li><strong>AI Integration:</strong> Inline AI assistants for summarization, translation, and code generation.</li>
+            <li><strong>Decentralized Web:</strong> Support for IPFS, blockchain-based identity, and peer-to-peer data networks.</li>
+            <li><strong>Privacy Sandbox:</strong> New APIs for ad-targeting that limit cross-site tracking while protecting user privacy.</li>
+            <li><strong>WebXR &amp; Immersive Media:</strong> Native VR/AR experiences in the browser without plugins.</li>
+          </ul>
+        </main>
 
-        <h2>Current Market Landscape</h2>
-        <p>
-          Google Chrome remains the market leader with over 60% share, thanks to its V8 engine,
-          frequent updates, and deep integration with Google services. Safari commands the Apple
-          ecosystem with strong performance on iOS and macOS. Microsoft Edge (Chromium-based),
-          Firefox, and Opera round out the top five, each offering unique features like privacy
-          modes, built-in VPNs, or battery-saving profiles.
-        </p>
-    
-        <h2>Key Technologies</h2>
-        <ul>
-          <li><strong>Rendering Engines:</strong> Blink (Chrome, Edge, Opera), WebKit (Safari), and Gecko (Firefox) power layout and paint.</li>
-          <li><strong>JavaScript Engines:</strong> V8 (Chrome/Edge), SpiderMonkey (Firefox), and JavaScriptCore (Safari) execute code at near-native speeds.</li>
-          <li><strong>WebAssembly:</strong> Enables near-C++ performance for apps, games, and frameworks directly in the browser.</li>
-          <li><strong>DevTools:</strong> Integrated debugging, network profiling, performance audits, and accessibility inspectors.</li>
-        </ul>
-    
-        <h2>Security &amp; Privacy Enhancements</h2>
-        <p>
-          Modern browsers enforce strict sandboxing per tab or process, employ site isolation,
-          and offer built-in phishing/malware protection. Tracking prevention and fingerprinting
-          resistance are now standard in Edge’s Tracking Prevention, Firefox’s Enhanced Tracking
-          Protection, and Safari’s Intelligent Tracking Prevention.
-        </p>
-    
-        <h2>Performance &amp; Optimization</h2>
-        <p>
-          Browsers constantly optimize for speed via techniques like lazy-loading images,
-          resource prefetching, and code-splitting. HTTP/3, QUIC, and TLS 1.3 adoption reduce
-          latency, while GPU-accelerated compositing and multi-threaded layout improve UI smoothness.
-        </p>
-    
-        <h2>Mobile &amp; Cross-Device</h2>
-        <p>
-          Chrome for Android and Safari on iOS power billions of mobile sessions. Progressive
-          Web Apps blur the line between web pages and native apps, offering offline access,
-          push notifications, and home-screen installation across platforms.
-        </p>
-    
-        <h2>Emerging Trends</h2>
-        <ul>
-          <li><strong>AI Integration:</strong> Inline AI assistants for summarization, translation, and code generation.</li>
-          <li><strong>Decentralized Web:</strong> Support for IPFS, blockchain-based identity, and peer-to-peer data networks.</li>
-          <li><strong>Privacy Sandbox:</strong> New APIs for ad-targeting that limit cross-site tracking while protecting user privacy.</li>
-          <li><strong>WebXR &amp; Immersive Media:</strong> Native VR/AR experiences in the browser without plugins.</li>
-        </ul>
-      </main>
-
-      <!-- div block for next/back buttons-->
-      <div class="next-container">
-        <a href="earlyWeb.html"><button class="next-btn">Back</button></a>
-        <a href="references.html"><button class="next-btn">Next</button></a>
-      </div>
-      <script src="main.js"></script>
-</body>
+        <!-- div block for next/back buttons-->
+        <div class="next-container">
+          <a href="earlyWeb.html"><button class="next-btn">Back</button></a>
+          <a href="references.html"><button class="next-btn">Next</button></a>
+        </div>
+        <script src="main.js"></script>
+  </body>
 </html>
