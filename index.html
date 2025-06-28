@@ -3,9 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Web Browser History</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-    <h1>Hello World</h1>
-</body>
+    <header class="site-header">
+        <h1>History of Web Browsers</h1>
+
+        <!--hamburger menu-->
+        <div class="hamburger-wrapper">
+            <button class="hamburger-btn" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+            </button>
+
+            <!--list of links inside hamburger menu-->
+            <nav class="hamburger-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="earlyWeb.html">Early Web Browsers</a></li>
+                    <li><a href="modernWeb.html">Modern Web Browsers</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+        <!-- Center image & center button wrapped in a styling div -->
+    <div class="top-center">
+        <img src="webBrowserLogo.png" alt="Timeline of browser logos">
+
+        <div class="next-container">
+            <a href="earlyWeb.html"><button class="next-btn">Lets Get Started!</button></a>
+        </div>
+    </div>
+
+      
+    
+      <!--JS script for hamburger button functionality -->
+      <script src="main.js"></script>
+    </body>
 </html>
