@@ -3,6 +3,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: "Inter";
   }
   
   /* Header styling */
@@ -17,7 +18,9 @@ html, body {
   
   .site-header h1 {
     margin: 0;
-    pointer-events: auto;    
+    pointer-events: auto;
+    font-family: "Inter";
+    font-size: 400%;    
   }
   
   /* Hamburger menu icon */
