@@ -1,100 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css" />
-</head>
-<body>
-  <header class="site-header">
-    <h1>Quiz</h1>
-    <input type="checkbox" id="menu-toggle" class="toggler" />      
-    <div class="header-content">
-       <label class="hamburger-btn" for="menu-toggle">
-          <div></div>
-       </label>
-    </div>
-    <!-- BACKDROP OVERLAY -->
-    <div class="menu-overlay"></div>
-    <!-- SLIDE-IN MENU -->
-    <nav class="hamburger-menu">
-       <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="earlyWeb.html">Early Web Browsers</a></li>
-          <li><a href="modernWeb.html">Modern Web Browsers</a></li>
-          <li><a href="quiz.html">Quiz</a></li>
-          <li><a href="references.html">References</a></li>
-       </ul>
-    </nav>
- </header>
-
-    <main class="content">
-        <form id="quizForm">
-          <!-- Q1 -->
-          <div class="question">
-            <h3>1. Who invented the first web browser?</h3>
-            <label><input type="radio" name="q1" value="A"> Marc Andreessen</label>
-            <label><input type="radio" name="q1" value="B"> Tim Berners-Lee</label>
-            <label><input type="radio" name="q1" value="C"> Bill Gates</label>
-            <label><input type="radio" name="q1" value="D"> Steve Jobs</label>
-          </div>
-    
-          <!-- Q2 -->
-          <div class="question">
-            <h3>2. In what year was Mosaic released?</h3>
-            <label><input type="radio" name="q2" value="A"> 1990</label>
-            <label><input type="radio" name="q2" value="B"> 1993</label>
-            <label><input type="radio" name="q2" value="C"> 1995</label>
-            <label><input type="radio" name="q2" value="D"> 1998</label>
-          </div>
-    
-          <!-- Q3 -->
-          <div class="question">
-            <h3>3. Which rendering engine does Google Chrome use?</h3>
-            <label><input type="radio" name="q3" value="A"> Gecko</label>
-            <label><input type="radio" name="q3" value="B"> Trident</label>
-            <label><input type="radio" name="q3" value="C"> Blink</label>
-            <label><input type="radio" name="q3" value="D"> WebKit</label>
-          </div>
-    
-          <!-- Q4 -->
-          <div class="question">
-            <h3>4. Fill in the blank: The __________ Policy prevents scripts on one origin from accessing data on another.</h3>
-            <input type="text" name="q4" style="width:100%; padding:0.4rem;" />
-          </div>
-    
-          <!-- Q5 -->
-          <div class="question">
-            <h3>5. Which of these are built-in browser security measures? (Select all that apply)</h3>
-            <label><input type="checkbox" name="q5" value="sandboxing"> Sandboxing</label>
-            <label><input type="checkbox" name="q5" value="sameOrigin"> Same-Origin Policy</label>
-            <label><input type="checkbox" name="q5" value="cookies"> Cookies</label>
-            <label><input type="checkbox" name="q5" value="tabs"> Tab isolation</label>
-          </div>
-    
-          <button type="submit">Submit Quiz</button>
-        </form>
-    
-        <div id="results" hidden>
-          <h2>Your Results</h2>
-          <div id="details"></div>
-          <p><strong>Total Score:</strong> <span id="score"></span>/5</p>
-          <p><strong>Outcome:</strong> <span id="outcome"></span></p>
-          <button id="restartBtn">Restart Quiz</button>
-        </div>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Quiz</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body>
+      <header class="site-header">
+         <h1>Quiz</h1>
+         <input type="checkbox" id="menu-toggle" class="toggler" />      
+         <div class="header-content">
+            <label class="hamburger-btn" for="menu-toggle">
+               <div></div>
+            </label>
+         </div>
+         <!-- BACKDROP OVERLAY -->
+         <div class="menu-overlay"></div>
+         <!-- SLIDE-IN MENU -->
+         <nav class="hamburger-menu">
+            <ul>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="earlyWeb.html">Early Web Browsers</a></li>
+               <li><a href="modernWeb.html">Modern Web Browsers</a></li>
+               <li><a href="quiz.html">Quiz</a></li>
+               <li><a href="references.html">References</a></li>
+            </ul>
+         </nav>
+      </header>
+      <main class="content">
+         <form id="quizForm">
+            <!-- Q1 -->
+            <div class="question">
+               <h3>1. Who invented the first web browser?</h3>
+               <label><input type="radio" name="q1" value="A"> Marc Andreessen</label>
+               <label><input type="radio" name="q1" value="B"> Tim Berners-Lee</label>
+               <label><input type="radio" name="q1" value="C"> Bill Gates</label>
+               <label><input type="radio" name="q1" value="D"> Steve Jobs</label>
+            </div>
+            <!-- Q2 -->
+            <div class="question">
+               <h3>2. In what year was Mosaic released?</h3>
+               <label><input type="radio" name="q2" value="A"> 1990</label>
+               <label><input type="radio" name="q2" value="B"> 1993</label>
+               <label><input type="radio" name="q2" value="C"> 1995</label>
+               <label><input type="radio" name="q2" value="D"> 1998</label>
+            </div>
+            <!-- Q3 -->
+            <div class="question">
+               <h3>3. Which rendering engine does Google Chrome use?</h3>
+               <label><input type="radio" name="q3" value="A"> Gecko</label>
+               <label><input type="radio" name="q3" value="B"> Trident</label>
+               <label><input type="radio" name="q3" value="C"> Blink</label>
+               <label><input type="radio" name="q3" value="D"> WebKit</label>
+            </div>
+            <!-- Q4 -->
+            <div class="question">
+               <h3>4. Fill in the blank: The __________ Policy prevents scripts on one origin from accessing data on another.</h3>
+               <input type="text" name="q4" style="width:100%; padding:0.4rem;" />
+            </div>
+            <!-- Q5 -->
+            <div class="question">
+               <h3>5. Which of these are built-in browser security measures? (Select all that apply)</h3>
+               <label><input type="checkbox" name="q5" value="sandboxing"> Sandboxing</label>
+               <label><input type="checkbox" name="q5" value="sameOrigin"> Same-Origin Policy</label>
+               <label><input type="checkbox" name="q5" value="cookies"> Cookies</label>
+               <label><input type="checkbox" name="q5" value="tabs"> Tab isolation</label>
+            </div>
+            <button type="submit">Submit Quiz</button>
+         </form>
+         <div id="results" hidden>
+            <h2>Your Results</h2>
+            <div id="details"></div>
+            <p><strong>Total Score:</strong> <span id="score"></span>/5</p>
+            <p><strong>Outcome:</strong> <span id="outcome"></span></p>
+            <button id="restartBtn">Restart Quiz</button>
+         </div>
       </main>
-
       <footer class="site-footer">
-        <p>
-          © 2025 Neal Valdez -- <a href="//ksuweb.github.io/IT3203/" target="_blank">//ksuweb.github.io/IT3203/</a> -- IT3203 Intro to Web Development
-        </p>
-      </footer> 
-
-    <!--JS script for hamburger button functionality -->
-    <script src="main.js"></script>
-</body>
+         <p>
+            © 2025 Neal Valdez -- <a href="//ksuweb.github.io/IT3203/" target="_blank">//ksuweb.github.io/IT3203/</a> -- IT3203 Intro to Web Development
+         </p>
+      </footer>
+      <!--JS script for hamburger button functionality -->
+      <script src="main.js"></script>
+   </body>
 </html>
