@@ -10,28 +10,27 @@
     <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
-    <!-- same as index -->
-    <header class="site-header">
-        <h1>Early Web Browser History</h1>
-
-        <div class="hamburger-wrapper">
-          <button class="hamburger-btn" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-
-          <nav class="hamburger-menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="earlyWeb.html">Early Web Browsers</a></li>
-                <li><a href="modernWeb.html">Modern Web Browsers</a></li>
-                <li><a href="quiz.html">Quiz</a></li>
-                <li><a href="references.html">References</a></li>
-              </ul>
-          </nav>
-        </div>
-      </header>
+  <header class="site-header">
+    <h1>References</h1>
+    <input type="checkbox" id="menu-toggle" class="toggler" />      
+    <div class="header-content">
+       <label class="hamburger-btn" for="menu-toggle">
+          <div></div>
+       </label>
+    </div>
+    <!-- BACKDROP OVERLAY -->
+    <div class="menu-overlay"></div>
+    <!-- SLIDE-IN MENU -->
+    <nav class="hamburger-menu">
+       <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="earlyWeb.html">Early Web Browsers</a></li>
+          <li><a href="modernWeb.html">Modern Web Browsers</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="references.html">References</a></li>
+       </ul>
+    </nav>
+ </header>
       
       <!-- References section, list format-->
       <main class="content">

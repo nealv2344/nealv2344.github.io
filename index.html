@@ -1,56 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Browser History</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css" />
-</head>
-<body>
-    <header class="site-header">
-        <h1>History of Web Browsers</h1>
-
-        <!--hamburger menu-->
-        <div class="hamburger-wrapper">
-            <button class="hamburger-btn" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-            </button>
-
-            <!--list of links inside hamburger menu-->
-            <nav class="hamburger-menu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="earlyWeb.html">Early Web Browsers</a></li>
-                    <li><a href="modernWeb.html">Modern Web Browsers</a></li>
-                    <li><a href="quiz.html">Quiz</a></li>
-                    <li><a href="references.html">References</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    
-        <!-- Center image & center button wrapped in a styling div -->
-    <div class="top-center">
-        <div class="logos-slide">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Web Browser History</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body>
+      <header class="site-header">
+         <h1>History of Web Browsers</h1>
+         <input type="checkbox" id="menu-toggle" class="toggler" />      
+         <div class="header-content">
+            <label class="hamburger-btn" for="menu-toggle">
+               <div></div>
+            </label>
+         </div>
+         <!-- BACKDROP OVERLAY -->
+         <div class="menu-overlay"></div>
+         <!-- SLIDE-IN MENU -->
+         <nav class="hamburger-menu">
+            <ul>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="earlyWeb.html">Early Web Browsers</a></li>
+               <li><a href="modernWeb.html">Modern Web Browsers</a></li>
+               <li><a href="quiz.html">Quiz</a></li>
+               <li><a href="references.html">References</a></li>
+            </ul>
+         </nav>
+      </header>
+      <!-- Center image & center button wrapped in a styling div -->
+      <div class="top-center">
+         <div class="logos-slide">
             <img src="webBrowserLogo.png" alt="Timeline of browser logos">
-        </div>
-        <div class="next-container">
+         </div>
+         <div class="next-container">
             <a href="earlyWeb.html"><button class="next-btn">Lets Get Started!</button></a>
-        </div>
-    </div>
-
-    <footer class="site-footer">
-        <p>
-          © 2025 Neal Valdez -- <a href="//ksuweb.github.io/IT3203/" target="_blank">//ksuweb.github.io/IT3203/</a> -- IT3203 Intro to Web Development
-        </p>
-    </footer>  
-    
-      <!--JS script for hamburger button functionality -->
+         </div>
+      </div>
+      <footer class="site-footer">
+         <p>
+            © 2025 Neal Valdez -- <a href="//ksuweb.github.io/IT3203/" target="_blank">//ksuweb.github.io/IT3203/</a> -- IT3203 Intro to Web Development
+         </p>
+      </footer>
+      <!--JS script -->
       <script src="main.js"></script>
-    </body>
+   </body>
 </html>

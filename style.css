@@ -4,90 +4,182 @@ html, body {
     padding: 0;
     height: 100%;
     font-family: "Inter";
+    background-color: #f7f7f7;
   }
   
-  /* Header styling */
   .site-header {
-    display: flex;
-    justify-content: center; /* centers h1 */
-    align-items: center;     /* vertically center H1 and hamburger */
-    pointer-events: none;    /* let only button react to clicks */
-    z-index: 1000;
-    margin: 6vh;
+    position: relative;
+    text-align: center;    /* keep H1 centered */
+    padding: 1.5rem 2rem;
   }
   
   .site-header h1 {
     margin: 0;
-    pointer-events: auto;
-    font-family: "Inter";
-    font-size: 400%;    
+    font-size: 400%;
   }
   
-  /* Hamburger menu icon */
+  /* Float the entire hamburger at the right, centered vertically */
   .hamburger-wrapper {
     position: absolute;
-    right: 5%;
-    pointer-events: auto;    /* makes button clickable */
+    top: 50%;
+    right: 2rem;           /* adjust horizontal offset */
+    transform: translateY(-50%);
+    z-index: 10;
   }
   
-  .hamburger-btn {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 24px;
-    height: 20px;
-    padding: 0;
-    background: none;
-    border: none;
+  
+  /* HIDDEN CHECKBOX */
+  .toggler {
+    position: absolute;
+    top: 2rem;
+    right: 1.5rem;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    z-index: 4;
     cursor: pointer;
   }
   
-  .hamburger-btn span {
-    display: block;
-    height: 2px;
-    background: #333;
-    border-radius: 1px;
+  /* Hamburger icon */
+  .hamburger-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    top: 2rem;
+    right: 1.5rem;
+    z-index: 3;
   }
   
-  .hamburger-menu {
+  .hamburger-btn div {
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    position: relative;
+    transition: background 0.3s ease;
+  }
+  
+  .hamburger-btn div::before,
+  .hamburger-btn div::after {
+    content: '';
     position: absolute;
-    top: calc(100% + 8px);
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3s ease;
+    left: 0;
+  }
+  
+  .hamburger-btn div::before {
+    top: -8px;
+  }
+  
+  .hamburger-btn div::after {
+    top: 8px;
+  }
+  
+  /* Transform icon into X */
+  .toggler:checked + .header-content .hamburger-btn div {
+    background-color: transparent;
+  }
+  
+  .toggler:checked + .header-content .hamburger-btn div::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  
+  .toggler:checked + .header-content .hamburger-btn div::after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  
+  /* Slide-in menu */
+  .hamburger-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 2;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  /* Toggle menu visible */
+  .toggler:checked ~ .hamburger-menu {
     right: 0;
-    background: white;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    border-radius: 4px;
-    overflow: hidden;
-    display: none;
   }
   
   .hamburger-menu ul {
     list-style: none;
     margin: 0;
-    padding: 0.5rem 0;
+    padding: 100px 20px ;
+    width: 100%;
   }
   
-  .hamburger-menu li + li {
-    border-top: 1px solid #eee;
+  .hamburger-menu ul li {
+    margin-bottom: 1.5rem;
+    width: 100%;
   }
   
-  .hamburger-menu a {
-    display: block;
-    padding: 0.5rem 1rem;
-    color: #333;
+  .hamburger-menu ul li a {
     text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    display: block;
+    width: 100%;
   }
   
-  .hamburger-menu a:hover {
-    background: #f5f5f5;
+  .hamburger-menu ul li a:hover {
+    transform: scale(1.08);
+    color: orange;
   }
+  
+/* Shadow Overlay */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
 
+/* Show overlay when toggler is checked */
+.toggler:checked ~ .menu-overlay {
+  opacity: 1;
+  pointer-events: all;
+}
 
+/* Adjust z-index for other components */
+.site-header {
+  position: relative;
+  z-index: 10;
+}
 
+.hamburger-menu {
+  z-index: 2;
+}
 
+.toggler {
+  z-index: 4;
+}
 
-
-
-
+.hamburger-btn {
+  z-index: 3;
+}
 
 
 
@@ -144,20 +236,33 @@ html, body {
         gap: 1rem;
         margin: 3rem 0;    
       }
-      
+  
+
       .next-btn {
-        padding: 0.5rem 1.5rem;
-        font-size: 1rem;
-        background: #333;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        display:inline-block;
+        
+        display: inline-block;
+        outline: none;
         cursor: pointer;
+        font-size: 14px;
+        line-height: 1;
+        border-radius: 500px;
+        transition-duration: .3s;
+        border: 1px solid transparent;
+        letter-spacing: 2px;
+        min-width: 160px;
+        text-transform: uppercase;
+        white-space: normal;
+        font-weight: 700;
+        text-align: center;
+        padding: 17px 48px;
+        color: #fff;
+        background-color: #444444;
+        height: 48px;
       }
       
       .next-btn:hover {
-        background: #555;
+        transform: scale(1.04);
+        background-color: #262626;
       }
 
       /* ——— FOOTER ——— */
