@@ -244,7 +244,6 @@ body {
 
 
 .next-btn {
-
 	display: inline-block;
 	outline: none;
 	cursor: pointer;
@@ -268,6 +267,28 @@ body {
 .next-btn:hover {
 	transform: scale(1.04);
 	background-color: #262626;
+}
+
+.QuizBtn {
+  display: inline-block;
+	outline: none;
+	cursor: pointer;
+	font-size: 14px;
+	line-height: 1;
+	border-radius: 500px;
+	transition-duration: .3s;
+	border: 1px solid transparent;
+	letter-spacing: 2px;
+	min-width: 160px;
+	text-transform: uppercase;
+	white-space: normal;
+	font-weight: 700;
+	text-align: center;
+	padding: 17px 48px;
+	color: #fff;
+	background-color: #444444;
+	height: 48px;
+  margin-top: 20px;
 }
 
 /* ——— FOOTER ——— */
